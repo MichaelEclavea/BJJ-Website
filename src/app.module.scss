@@ -1,0 +1,32 @@
+@import './common/common.module';
+
+.root {
+  box-sizing: border-box;
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+  overflow: hidden;
+  padding-top: $commandBar-height;
+}
+
+.pageContainer {
+  @include customScrollbar();
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: $page-height;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.pageWrapper {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: $page-max-width;
+}
