@@ -10,12 +10,12 @@ function Plan(title, dates, times, description) {
 }
 
 const PricingPage = () => {
-  const childPlan = new Plan('3-8yrs', 'Mon-Thurs', '4pm-6pm', 'This is a great class for beginners at a very young age. Students will build a strong foundation in the basics.');
-  const youthPlan = new Plan('3-8yrs', 'Mon-Thurs', '4pm-6pm', 'This is a great class for beginners at a very young age. Students will build a strong foundation in the basics.');
-  const adultPlan = new Plan('3-8yrs', 'Mon-Thurs', '4pm-6pm', 'This is a great class for beginners at a very young age. Students will build a strong foundation in the basics.');
-  const familyPlan = new Plan('3-8yrs', 'Mon-Thurs', '4pm-6pm', 'This is a great class for beginners at a very young age. Students will build a strong foundation in the basics.');
+  const kidsPlan = new Plan('Kids', 'Mon-Thurs', '2pm-4pm', 'This is a great class for beginners at a very young age. Students will build a strong foundation in the basics.');
+  const womenPlan = new Plan('Womens', 'Mon-Thurs', '6pm-8pm', 'This is a great class for beginners at a very young age. Students will build a strong foundation in the basics.');
+  const adultPlan = new Plan('Adult', 'Mon-Thurs', '4pm-6pm', 'This is a great class for beginners at a very young age. Students will build a strong foundation in the basics.');
+  const advancedPlan = new Plan('Advanced', 'Fri-Sat', '2pm-4:30pm', 'This is a great class for beginners at a very young age. Students will build a strong foundation in the basics.');
 
-  const plans = [childPlan, youthPlan, adultPlan, familyPlan];
+  const plans = [kidsPlan, womenPlan, adultPlan, advancedPlan];
 
   return (
     <div id={'pricing'} className={styles.pricingPageContainer}>

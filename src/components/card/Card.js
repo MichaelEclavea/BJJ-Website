@@ -1,4 +1,4 @@
-import React from 'react';
+import Typography from '@mui/material/Typography/Typography';
 import styles from './card.module.scss';
 
 export const Card = (props) => {
@@ -8,14 +8,14 @@ export const Card = (props) => {
     if (teamItems) {
       return teamItems.map((person, idx) => (
         <div key={`${person.title}-${idx}`} className={styles.cardWrapper}>
-          <h3 className={styles.cardTitle}>{person.name}</h3>
+          <Typography variant="h6" color={'black'}>{person.name}</Typography>
           <div className={styles.cardRoot}>
             <div className={styles.imgContainer}>
               <img src={person.image} className={styles.image} />
             </div>
             <div className={styles.cardBody}>
-              <h3 className={styles.cardTitle}>{person.title}</h3>
-              <p className={styles.description}>{person.description}</p>
+              <Typography variant="h6" align='left'>{person.title}</Typography>
+              <Typography variant="body2" align='left'>{person.description}</Typography>
             </div>
           </div>
         </div>
@@ -28,10 +28,19 @@ export const Card = (props) => {
     if (planItems) {
       return planItems.map((item, idx) => (
         <div key={`${item.title}-${idx}`} className={styles.cardRootPlan}>
-          <h3 className={styles.cardTitle}>{item.title}</h3>
-          <p className={styles.textKey}>Dates: <span className={styles.description}>{item.dates}</span></p>
-          <p className={styles.textKey}>Times: <span className={styles.description}>{item.times}</span></p>
-          <p className={styles.textKey}>Description: <span className={styles.description}>{item.description}</span></p>
+          <Typography variant="h6" color={'black'}>{item.title}</Typography>
+          <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+            <Typography variant="subtitle1">Dates:</Typography>
+            <Typography variant="subtitle2">{item.dates}</Typography>
+          </div>
+          <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+            <Typography variant="subtitle1">Times:</Typography>
+            <Typography variant="subtitle2">{item.times}</Typography>
+          </div>
+          <div style={{ display: 'inline-block' }}>
+            <Typography variant="body1">Description:</Typography>
+            <Typography variant="subtitle2">{item.description}</Typography>
+          </div>
         </div>
       ))
     }

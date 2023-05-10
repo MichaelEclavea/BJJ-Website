@@ -11,7 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import SportsKabaddi from '@mui/icons-material/SportsKabaddi';
 import Link from '@mui/material/Link/Link';
 import styles from './navBar.module.scss';
 
@@ -32,10 +32,10 @@ const NavBar = () => {
   const _renderAppLogo = () => {
     return (
       <>
-        <Link href="/" color='inherit' variant="primary" underline='none' style={{ cursor: 'pointer' }}>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'flex' }, mr: 1 }} />
+        <Link href="/" color='inherit' variant="primary" underline='none' style={{ cursor: 'pointer', marginRight: '12px' }}>
+          <SportsKabaddi sx={{ display: { xs: 'flex', md: 'flex' }, mr: 1 }} />
         </Link>
-        <Typography
+        {/* <Typography
           variant="h6"
           noWrap
           component="a"
@@ -50,15 +50,15 @@ const NavBar = () => {
             textDecoration: 'none',
           }}
         >
-          LOGO
-        </Typography>
+          BJJ
+        </Typography> */}
       </>
     )
   }
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar style={{ backgroundColor: '#1d3449' }}>
+      <AppBar  className={styles.navRoot} style={{ backgroundColor: '#0e1b27' }}>
         <Container maxWidth="xl">
           <Toolbar>
             {_renderAppLogo()}
