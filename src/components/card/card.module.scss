@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   flex-grow: 1;
   gap: 24px;
+  justify-content: center;
 }
 
 .cardWrapper {
@@ -77,8 +78,8 @@
 .cardBody {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 0px 12px;
+  // justify-content: center;
+  padding: 0px 12px 8px;
 }
 
 .textKey {
@@ -89,4 +90,13 @@
 .description {
   font-size: 12px;
   font-weight: 400;
+}
+
+.cardAnimation {
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }

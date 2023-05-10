@@ -7,7 +7,7 @@ const ContactPage = ({ scrollToTop }) => {
   return (
     <div id={'contact'} className={styles.contactPageContainer}>
       <h2>Contact Us</h2>
-      <Button href={'/'} onClick={() => scrollToTop()}>Scroll to Top</Button>
+      <Button href={'/#home'} onClick={() => scrollToTop()}>Scroll to Top</Button>
     </div>
   )
 }

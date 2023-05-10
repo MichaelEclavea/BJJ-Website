@@ -5,4 +5,59 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../../public/images/person1.jpg');
+  padding: 0px 24px;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.6;
+  z-index: 1;
+  background-position: center;
+  background: radial-gradient(circle, rgb(43, 43, 43) 0%, rgb(15, 15, 15) 35%, rgb(0, 0, 0) 100%);
+}
+
+.header1 {
+  color: white;
+  z-index: 2;
+  animation: fadeInFirst 4s forwards;
+  position: absolute;
+}
+
+.header2 {
+  color: white;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeInSecond 6s forwards;
+  transition: ease-in-out;
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeInFirst {
+  0% {
+    left: -2000px;
+  }
+
+  100% {
+    position: relative;
+    left: 0;
+  }
+}
+
+@keyframes fadeInSecond {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
